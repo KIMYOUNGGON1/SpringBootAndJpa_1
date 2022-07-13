@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/jpashop
+    username: sa
+    password: 1
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+#      application 실행 시점에 모든 Entity를 지우고 새롭게 생성함.
+    properties:
+      hibernate:
+#        show_sql: true
+#        sout으로 출력되는 것을 의미. debug로 찍히도록 하는게 바람직함.
+        format_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
+#    query의 parameter 값을 확인할 수 있음.
