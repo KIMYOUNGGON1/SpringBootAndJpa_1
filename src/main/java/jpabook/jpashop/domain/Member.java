@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Table
 @Getter @Setter
 public class Member {
 
@@ -23,6 +24,8 @@ public class Member {
 
     @OneToMany(mappedBy = "member") // 매핑되었을 뿐 연관관계의 주인은 Order class의 member다.
     private List<Order> orders = new ArrayList<>();
+
+
 
 
 }
