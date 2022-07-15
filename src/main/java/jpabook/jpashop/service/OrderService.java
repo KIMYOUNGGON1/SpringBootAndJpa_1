@@ -37,6 +37,7 @@ public class OrderService {
         Delivery delivery = new Delivery();
         delivery.setAddress(member.getAddress());
 
+
         //주문상품 생성
         OrderItem orderItem = OrderItem.createOrderItem(item, item.getPrice(), count);
 
@@ -45,6 +46,7 @@ public class OrderService {
 
         //주문 저장
         orderRepository.save(order);
+
 
         return order.getId();
     }
